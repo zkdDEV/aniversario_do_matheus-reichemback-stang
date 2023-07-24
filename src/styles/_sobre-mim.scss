@@ -1,0 +1,56 @@
+@use 'variaveis';
+.sobre-mim
+{
+    .container
+    {
+        max-width: 1024px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-row-gap: 64px;
+        padding: 16px;
+
+        &--border-radius-top
+        {
+            border-radius: 16px 16px 0px 0px;
+        }
+        &--border-radius-bottom
+        {
+            border-radius: 0px 0px 8px 8px;
+            margin-bottom: 64px;
+        }
+        &--grid-reverse
+        {
+            grid-template-columns: 1fr 2fr;
+            gap: 32px;
+        }
+        &--first-gradient
+        {
+            background-image: linear-gradient(variaveis.$corDoGradiente1, variaveis.$corDoGradiente2);
+        }
+        &--second-gradient
+        {
+            background-image: linear-gradient(variaveis.$corDoGradiente2, variaveis.$corDoGradiente3);
+        }
+        &--third-gradient
+        {
+            background-image: linear-gradient(variaveis.$corDoGradiente3, variaveis.$corDoGradiente4);
+        }
+        &--fourth-gradient
+        {
+            background-image: linear-gradient(variaveis.$corDoGradiente4, variaveis.$corDoGradiente5);
+        }
+    }
+    
+    &__texto
+    {
+        h2
+        {
+            padding-bottom: 24px;
+        }
+    }
+    &__imagem
+    {
+        margin: 0 auto;
+        height: 270px;
+    }
+}

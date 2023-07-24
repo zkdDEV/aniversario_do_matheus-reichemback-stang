@@ -1,0 +1,28 @@
+@use 'variaveis';
+@use 'hero';
+@use 'sobre-mim';
+@use 'footer';
+
+@font-face
+{
+    font-family: leagueSpartan;
+    src: url(../../fonts/LeagueSpartan-Bold.otf);
+    font-weight: 400;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: leagueSpartan;
+    color: variaveis.$corDeTextoPrincipal
+}
+body
+{
+    background-color: variaveis.$corDeFundo;
+}
+.container
+{
+    margin: 0 auto;
+}

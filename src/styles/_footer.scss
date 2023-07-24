@@ -1,0 +1,42 @@
+@use 'variaveis';
+
+.footer
+{
+    .container
+    {
+        max-width: 1024px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: variaveis.$corDoFooter;
+        padding: 16px 0 16px 16px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    &__copyright
+    {
+        p
+        {
+            font-size: 16px;
+            color: variaveis.$corDeTextoTerciario;
+        }
+    }
+
+    &__links
+    {
+        list-style: none;
+        display: flex;
+
+        &__link
+        {
+            padding-right: 16px;
+            transition: all 0.3s ease;
+
+            &:hover
+            {
+                transition: all 0.3s ease;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
