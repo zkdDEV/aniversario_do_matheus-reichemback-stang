@@ -4,6 +4,11 @@ const uglify = require('gulp-uglify');
 const imagemin = require("gulp-imagemin");
 const htmlmin = require('gulp-htmlmin');
 
+function fonts()
+{
+    return gulp.src('./src/styles/fonts/*.otf')
+        .pipe(gulp.dest('./dist/styles/fonts/'))
+}
 function html()
 {
     return gulp.src('./src/*.html')
@@ -30,7 +35,7 @@ function images()
 }
 
 
-exports.default = gulp.parallel(html, styles, images, scripts)
+exports.default = gulp.parallel(html, styles, images, scripts, fonts)
 exports.watch = function()
 {
     gulp.watch("./src/styles/*.scss", gulp.parallel(styles))
